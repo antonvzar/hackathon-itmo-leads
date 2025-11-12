@@ -1,0 +1,54 @@
+.root {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.sider {
+  background: #fff !important;
+  border-right: 1px solid #e6ebf4;
+}
+
+.mainLayout {
+  background: transparent !important;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 0 !important;
+  line-height: normal;
+  background: transparent !important;
+}
+
+.content {
+  padding: 32px 48px 48px;
+  min-height: calc(100vh - 65px);
+  background: transparent;
+}
+
+.contentInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.drawer :global(.ant-drawer-body) {
+  padding: 0;
+}
+
+@media (max-width: 1199px) {
+  .content {
+    padding: 24px 32px 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content {
+    padding: 24px 20px 80px;
+  }
+}
+
+@media (max-width: 575px) {
+  .content {
+    padding: 20px 16px 64px;
+  }
+}

@@ -1,0 +1,11 @@
+#root {
+  height: 100%;
+}
+
+.ant-btn-primary {
+  box-shadow: none;
+}
+
+.ant-btn-primary:not(:disabled):hover {
+  background: #1558d6;
+}
