@@ -3,6 +3,7 @@ import ruRU from 'antd/locale/ru_RU';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './layout/AppLayout';
 import DashboardPage from './pages/dashboard/DashboardPage';
+import MyObjectsPage from './pages/my-objects/MyObjectsPage';
 import PlaceholderPage from './pages/PlaceholderPage';
 import './App.css';
 
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
       { index: true, element: <DashboardPage /> },
       {
         path: 'my-objects',
-        element: <PlaceholderPage title="Мои объекты" />,
+        element: <MyObjectsPage />,
       },
       {
         path: 'leads-catalog',
