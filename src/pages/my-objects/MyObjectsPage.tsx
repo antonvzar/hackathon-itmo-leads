@@ -11,6 +11,7 @@ import {
 } from '@ant-design/icons';
 import { Button, Input, Segmented, Table, Tag, Tooltip, Typography } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
+import { useNavigate } from 'react-router-dom';
 import styles from './MyObjectsPage.module.css';
 
 type Status = 'active' | 'hidden';
@@ -40,6 +41,7 @@ const statusMeta: Record<Status, { text: string; color: string; background: stri
 
 const MyObjectsPage = () => {
   const [view, setView] = useState<'list' | 'grid'>('list');
+  const navigate = useNavigate();
 
   const columns = useMemo<ColumnsType<Listing>>(
     () => [
@@ -105,7 +107,13 @@ const MyObjectsPage = () => {
         <Title level={2} style={{ marginBottom: 0 }}>
           Мои объекты
         </Title>
-        <Button type="primary" size="large" icon={<PlusOutlined />} className={styles.pageHeaderAction}>
+        <Button
+          type="primary"
+          size="large"
+          icon={<PlusOutlined />}
+          className={styles.pageHeaderAction}
+          onClick={() => navigate('/my-objects/new')}
+        >
           Создать новый объект
         </Button>
       </div>

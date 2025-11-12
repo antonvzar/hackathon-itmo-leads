@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './layout/AppLayout';
 import DashboardPage from './pages/dashboard/DashboardPage';
 import MyObjectsPage from './pages/my-objects/MyObjectsPage';
+import NewObjectPage from './pages/my-objects/NewObjectPage';
 import PlaceholderPage from './pages/PlaceholderPage';
 import './App.css';
 
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: 'my-objects',
         element: <MyObjectsPage />,
+      },
+      {
+        path: 'my-objects/new',
+        element: <NewObjectPage />,
       },
       {
         path: 'leads-catalog',
