@@ -5,6 +5,7 @@ import AppLayout from './layout/AppLayout';
 import DashboardPage from './pages/dashboard/DashboardPage';
 import MyObjectsPage from './pages/my-objects/MyObjectsPage';
 import NewObjectPage from './pages/my-objects/NewObjectPage';
+import LeadsMarketplacePage from './pages/leads/LeadsMarketplacePage';
 import PlaceholderPage from './pages/PlaceholderPage';
 import './App.css';
 
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'leads-catalog',
-        element: <PlaceholderPage title="Каталог лидов" />,
+        element: <LeadsMarketplacePage />,
       },
       {
         path: 'deals',
