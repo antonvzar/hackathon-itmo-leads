@@ -272,6 +272,93 @@ const leadsData: Lead[] = [
     contactCost: 65,
     freshness: 2,
   },
+  {
+    id: 'lead-16',
+    city: 'Москва',
+    dealType: 'Покупка',
+    propertyType: 'Квартира',
+    budgetLabel: '30-32 млн ₽',
+    budgetMin: 30000000,
+    budgetMax: 32000000,
+    rooms: 3,
+    source: 'Циан',
+    name: 'Пётр Г.',
+    phone: '+7 916 ***-**-31',
+    email: 'peterg@example.ru',
+    quality: 88,
+    exclusive: true,
+    contactCost: 58,
+    freshness: 1,
+  },
+  {
+    id: 'lead-17',
+    city: 'Новосибирск',
+    dealType: 'Продажа',
+    propertyType: 'Коммерческая недвижимость',
+    budgetLabel: '18-20 млн ₽',
+    budgetMin: 18000000,
+    budgetMax: 20000000,
+    rooms: '5+',
+    source: 'Авито',
+    name: 'Леонид Ж.',
+    phone: '+7 913 ***-**-75',
+    email: 'leonid.j@example.ru',
+    quality: 67,
+    contactCost: 36,
+    freshness: 4,
+  },
+  {
+    id: 'lead-18',
+    city: 'Сочи',
+    dealType: 'Аренда',
+    propertyType: 'Квартира',
+    budgetLabel: '90-110 тыс ₽',
+    budgetMin: 90000,
+    budgetMax: 110000,
+    rooms: 3,
+    source: 'Realtor',
+    name: 'Валерия Н.',
+    phone: '+7 918 ***-**-88',
+    email: 'valeria.n@example.ru',
+    quality: 73,
+    contactCost: 28,
+    freshness: 3,
+  },
+  {
+    id: 'lead-19',
+    city: 'Екатеринбург',
+    dealType: 'Покупка',
+    propertyType: 'Дом',
+    budgetLabel: '26-28 млн ₽',
+    budgetMin: 26000000,
+    budgetMax: 28000000,
+    rooms: '5+',
+    source: 'Циан',
+    name: 'Никита А.',
+    phone: '+7 922 ***-**-54',
+    email: 'nikita.a@example.ru',
+    quality: 79,
+    contactCost: 44,
+    freshness: 6,
+  },
+  {
+    id: 'lead-20',
+    city: 'Москва',
+    dealType: 'Аренда',
+    propertyType: 'Апартаменты',
+    budgetLabel: '200-220 тыс ₽',
+    budgetMin: 200000,
+    budgetMax: 220000,
+    rooms: 2,
+    source: 'Циан',
+    name: 'Маргарита Я.',
+    phone: '+7 985 ***-**-33',
+    email: 'margarita.y@example.ru',
+    quality: 85,
+    exclusive: true,
+    contactCost: 62,
+    freshness: 2,
+  },
 ];
 
 const defaultFilters: LeadFiltersState = {
@@ -285,7 +372,7 @@ const defaultFilters: LeadFiltersState = {
   exclusive: false,
 };
 
-const pageSize = 6;
+const pageSize = 9;
 
 const LeadsMarketplacePage = () => {
   const [filters, setFilters] = useState<LeadFiltersState>(defaultFilters);
@@ -389,6 +476,12 @@ const LeadsMarketplacePage = () => {
 
   return (
     <div className={styles.column}>
+      <Typography.Title level={2} style={{ margin: 0 }}>
+        Биржа лидов
+      </Typography.Title>
+      <Typography.Text type="secondary">
+        Актуальные заявки от клиентов и партнеров. Настройте фильтры, чтобы быстрее найти подходящих.
+      </Typography.Text>
       <div className={styles.layout}>
         <LeadFilters value={filters} onChange={(nextFilters) => {
           setFilters(nextFilters);
